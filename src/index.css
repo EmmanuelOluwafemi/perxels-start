@@ -1,0 +1,33 @@
+@font-face {
+  font-family: ProximaBold;
+  src: url('./fonts/Proxima-Nova-Bold.otf'); 
+}
+
+@font-face {
+  font-family: ProximaRegular;
+  src: url('./fonts/ProximaNova-Regular.otf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: ProximaRegular, "Helvetica", "Arial", sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  padding: 0 6%;
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    padding: 0 3%;
+  }
+}
