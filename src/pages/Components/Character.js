@@ -30,7 +30,6 @@ const CharacterStyle = Styled.div`
     margin-top: 157px;
     margin-bottom: 64px;
     border-radius: 10px;
-    overflow-x: hidden;
 
     img {
         position: absolute;
