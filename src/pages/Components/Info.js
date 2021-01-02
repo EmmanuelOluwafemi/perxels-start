@@ -33,7 +33,7 @@ export const Info = () => {
                 </InfoHeadeingStyle>
 
                 <div className="row justify-content-around align-items-center new-row" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                    <Content className="col-md-6 col-xl-4 mb-5 mb-md-0">
+                    <Content className="col-md-6 px-4 col-xl-4 mb-5 mb-md-0">
                         <h5>THE BEGINNER‘S CLASS</h5>
                         <p>This class is for those with the following criteria: </p>
                         <InfoList >
@@ -52,12 +52,12 @@ export const Info = () => {
                         <img className="img-fluid" src={image1} alt="lecture"/>
                     </ImageContainer>
                 </div>
-                <div className="row" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" style={{ alignItems: 'center', marginTop: '160px', marginLeft: '3%' }}>
+                <div className="row align-items-center second-row" style={{ marginTop: '160px' }} data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                     <ImageContainer className="col-md-6 order-2 order-md-1  mt-5 mt-md-0">
                         <div className="under"></div>
                         <img className="img-fluid" src={image2} alt="lecture"/>
                     </ImageContainer>
-                    <Content className="col-md-6 pl-0 pl-md-5 order-1 order-md-2  mb-5 mb-md-0">
+                    <Content className="col-md-6 px-4 order-1 order-md-2  mb-5 mb-md-0">
                         <h5>THE INTERMEDIATE CLASS</h5>
                         <p>This class is for those with the following criteria: </p>
                         <InfoList >
@@ -182,7 +182,8 @@ const InfoHeadeingStyle = Styled.div`
 `;
 
 const Content = Styled.div`
-
+    max-width: 100vw;
+    box-sizing: border-box;
     h5 {
         font-family: 'Roboto', sans-serif;
         font-size: 1.3rem;

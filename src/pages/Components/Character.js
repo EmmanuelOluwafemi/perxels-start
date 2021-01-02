@@ -9,10 +9,11 @@ const Character = () => {
             <CharacterStyle data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" >
                 <img className="img-fluid" src={mainCharacter} alt="main character"/>
                 <div className="content">
-                    Getting into the design industry especially UI / UX  design can be difficult 
-                    because you see all of these beautiful design interfaces online, but you don’t 
-                    know where to start, which tools to use, how to learn it well, where to learn etc. 
-                    <span>You are just overwhelmed!</span>
+                Getting into the design industry especially UI/UX design can be difficult  
+                because you see all of these beautiful design interfaces online, but you 
+                don't know where to start, which tools to use, how to learn it well, where
+                to learn e.t.c and you are just overwhelmed! 
+                    <span> Then this is the right masterclass for you.</span>
                 </div>
             </CharacterStyle>
         </div>

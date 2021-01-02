@@ -28,9 +28,8 @@ body {
   padding: 0 6%;
 }
 
-.new-row {
-  margin-left: 3%;
-  
+.new-row, .second-row {
+  margin-left: 3%; 
 }
 
 @media (max-width: 900px) {
@@ -38,7 +37,7 @@ body {
     padding: 0 3%;
   }
 
-  .new-row {
+  .new-row, .second-row {
     margin-left: 0;
   }
 }
