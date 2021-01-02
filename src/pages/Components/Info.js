@@ -4,7 +4,7 @@ import Styled from 'styled-components';
 
 export const Info = () => {
     return (
-        <InfoStyle>
+        <InfoStyle id="info">
             <div className="wrapper">
                 <InfoHeadeingStyle>
                     <h5>Everything you need to know about this class</h5>
@@ -12,16 +12,16 @@ export const Info = () => {
                     <h4>In this masterclass, we will be having two categories of students: Beginner and Intermediate students.</h4>
                 </InfoHeadeingStyle>
 
-                <div className="row" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" style={{ alignItems: 'center', marginLeft: '3%' }}>
-                    <Content className="col-md-6 mb-5 mb-md-0">
+                <div className="row justify-content-around align-items-center new-row" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    <Content className="col-md-6 col-xl-4 mb-5 mb-md-0">
                         <h5>THE BEGINNER‘S CLASS</h5>
                         <p>This class is for those with the following criteria: </p>
                         <InfoList >
-                            <li><div></div>You dont know anything about design</li>
-                            <li><div></div>You have never design before</li>
-                            <li><div></div>You design but you have issues with allignment, 
-                                color usage, hierarchy, white space and all the basic 
-                                principles of design</li>
+                            <li><div></div><span>You dont know anything about design</span></li>
+                            <li><div></div><span>You have never design before</span></li>
+                            <li><div></div><span>You design but you have issues with allignment,<br/> 
+                                color usage, hierarchy, white space and all the <br/> basic 
+                                principles of design</span></li>
 
                         </InfoList>
                         <button className="joinBtn"><a href="http://perxels.com">JOIN THE BEGINNER’S CLASS</a></button>
@@ -41,9 +41,9 @@ export const Info = () => {
                         <h5>THE INTERMEDIATE CLASS</h5>
                         <p>This class is for those with the following criteria: </p>
                         <InfoList >
-                            <li><div></div>You can make beautiful and clelan design to an extent</li>
-                            <li><div></div>You dont understand how to use design thinking process to solve problem</li>
-                            <li><div></div>When working on a project you get stuck often <br/>You have design block often</li>
+                            <li><div></div><span>You can make beautiful and clelan design to an extent</span></li>
+                            <li><div></div><span>You dont understand how to use design<br/> thinking process to solve problem</span></li>
+                            <li><div></div><span>When working on a project you get stuck often <br/>You have design block often</span></li>
 
                         </InfoList>
                         <button className="joinBtn"><a href="http://perxels.com">JOIN THE BEGINNER’S CLASS</a></button>
@@ -74,13 +74,13 @@ const InfoHeadeingStyle = Styled.div`
     margin-bottom: 88px;
 
     h5 {
-        font-family: "Roboto", "san-serif";
+        font-family: 'Roboto', sans-serif;
         font-size: 1rem;
         font-weight: bold;
     }
 
     h2 {
-        font-family: "Roboto", "san-serif";
+        font-family: 'Roboto', sans-serif;
         font-size: 1.8rem;
         font-weight: bold;
         text-transform: uppercase;
@@ -98,7 +98,7 @@ const InfoHeadeingStyle = Styled.div`
 const Content = Styled.div`
 
     h5 {
-        font-family: "Roboto", "san-serif";
+        font-family: 'Roboto', sans-serif;
         font-size: 1.3rem;
         text-transform: uppercase;
         color: #edc602;
@@ -126,7 +126,7 @@ const Content = Styled.div`
         }
 
         a {
-            font-family: "Roboto", "san-serif";
+            font-family: 'Roboto', sans-serif;
             font-size: 14px;
             font-weight: bold;
             color: #34296B;
@@ -156,7 +156,7 @@ const Content = Styled.div`
         }
 
         a {
-            font-family: "Roboto", "san-serif";
+            font-family: 'Roboto', sans-serif;
             font-size: 14px;
             font-weight: bold;
             color: #34296B;
@@ -185,7 +185,10 @@ const InfoList = Styled.ul`
             width: 10px;
             height: 3px;
             background: #edc602;
-            margin-right: 8px;
+        }
+
+        span {
+            margin-left: 8px;
         }
     }
 `;

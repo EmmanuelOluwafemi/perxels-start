@@ -15,7 +15,7 @@ const Hero = () => {
             </div>
             <div className="content">
                 <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" >Welcome To <span>PERXELS FREE</span> UIUX Design masterclass</h2>
-                <button><a href="http://perxels.com">Join The Class</a></button>
+                <button><a href="#info">Join The Class</a></button>
             </div>
         </HeroStyle>
     )
@@ -69,7 +69,7 @@ const HeroStyle = Styled.header`
                 }
 
             }
-            @media (max-width: 360px) {
+            @media (max-width: 468px) {
                 img {
                     width: 100px;
                 }
@@ -111,9 +111,10 @@ const HeroStyle = Styled.header`
             }
         }
 
-        @media (max-width: 360px) {
+        @media (max-width: 468px) {
             h2 {
-                font-size: 2.1rem;
+                padding: 0 1rem;
+                font-size: 2rem;
             }
         }
 
