@@ -28,7 +28,7 @@ export const Info = () => {
             <div className="wrapper">
                 <InfoHeadeingStyle>
                     <h5>Everything you need to know about this class</h5>
-                    <h2>THIS IS A 3-5DAYS MASTERCLASS FOR FREE</h2>
+                    <h2>THIS IS A 3-5 DAYS MASTERCLASS FOR FREE</h2>
                     <h4>In this masterclass, we will be having two categories of students: Beginner and Intermediate students.</h4>
                 </InfoHeadeingStyle>
 
@@ -39,7 +39,7 @@ export const Info = () => {
                         <InfoList >
                             <li><div></div><span>You don't know anything about design</span></li>
                             <li><div></div><span>You have never designed before</span></li>
-                            <li><div></div><span>You design but you have issues with allignment,<br/> 
+                            <li><div></div><span>You design but you have issues with alignment,<br/> 
                                 color usage, hierarchy, white space and all the <br/> basic 
                                 principles of design</span></li>
 
