@@ -31,6 +31,7 @@ const HeroStyle = Styled.header`
     min-height: 500px;
     background-position: center;
     background-size: cover;
+    overflow-x: hidden;
 
     .overlay {
         position: absolute;

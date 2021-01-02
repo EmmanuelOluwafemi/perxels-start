@@ -14,17 +14,22 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: ProximaRegular, "Helvetica", "Arial", sans-serif;
-  width: 100vw;
   overflow-x: hidden;
 }
 
 .wrapper {
+  max-width: 100vw;
   padding: 0 6%;
 }
 

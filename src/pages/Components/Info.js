@@ -146,6 +146,7 @@ const InfoStyle = Styled.div`
     background: #34296B;
     min-height: 400px;
     padding: 120px 0;
+    overflow-x: hidden;
 `;
 
 const InfoHeadeingStyle = Styled.div`
@@ -275,6 +276,8 @@ const InfoList = Styled.ul`
 
 const ImageContainer = Styled.div`
     position: relative;
+    width: 100%;
+    max-width: 100vw; 
     
     .under {
         position: absolute;

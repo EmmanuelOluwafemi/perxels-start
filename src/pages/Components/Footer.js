@@ -15,6 +15,8 @@ const FooterStyle = Styled.footer`
     align-items: center;
     background: #fff; 
     height: 80px;
+    width: 100vw;
+    overflow-x: hidden;
 
     p {
         margin: 0;
