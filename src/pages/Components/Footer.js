@@ -4,7 +4,7 @@ import Styled from 'styled-components';
 export const Footer = () => {
     return (
         <FooterStyle>
-            <p><a href="http://perxels.com">Get in contact</a> if you have any questions</p>
+            <p><a href="http://wa.link/fschxi">Get in contact</a> if you have any questions</p>
         </FooterStyle>
     )
 }
