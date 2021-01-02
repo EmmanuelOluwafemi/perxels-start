@@ -1,17 +1,18 @@
 import React from 'react';
 
 import Styled from 'styled-components';
+import mainCharacter from './images/main_character.png';
 
 const Character = () => {
     return (
         <div className="wrapper">
             <CharacterStyle data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" >
-                <img className="img-fluid" src="./images/main_character.png" alt="main character"/>
+                <img className="img-fluid" src={mainCharacter} alt="main character"/>
                 <div className="content">
                     Getting into the design industry especially UI / UX  design can be difficult 
-                    because you see all of these beautiful design interface online, but you don’t 
+                    because you see all of these beautiful design interfaces online, but you don’t 
                     know where to start, which tools to use, how to learn it well, where to learn etc. 
-                    <span>You are just overwhelled!</span>
+                    <span>You are just overwhelmed!</span>
                 </div>
             </CharacterStyle>
         </div>

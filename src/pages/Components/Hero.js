@@ -1,16 +1,18 @@
 import React from 'react';
 import Styled from 'styled-components';
 
+import logo from './images/logo.svg';
+import heroImage from './images/hero_image.jpg';
 
 const Hero = () => {
 
     return (
-        <HeroStyle data-aos="fade-right" data-aos-duration="2000">
+        <HeroStyle style={{ background: `url(${heroImage})` }} data-aos="fade-right" data-aos-duration="2000">
             <div className="overlay"></div>
             <div className="wrapper">
                 <nav>
-                    <img className="img-fluid" src="./images/logo.svg" alt="perxels logo"/>
-                    <p><a href="http://perxels.com">Get in contact</a> <span>if you have any questions</span></p>
+                    <img className="img-fluid" src={logo} alt="perxels logo"/>
+                    <p><a href="http://wa.link/fschxi">Get in contact</a> <span>if you have any questions</span></p>
                 </nav>
             </div>
             <div className="content">
@@ -27,7 +29,6 @@ const HeroStyle = Styled.header`
     position: relative;
     width: 100%;
     min-height: 500px;
-    background: url('./images/hero_image.jpg');
     background-position: center;
     background-size: cover;
 
