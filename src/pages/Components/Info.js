@@ -182,7 +182,6 @@ const InfoHeadeingStyle = Styled.div`
 `;
 
 const Content = Styled.div`
-    max-width: 100vw;
     box-sizing: border-box;
     h5 {
         font-family: 'Roboto', sans-serif;
