@@ -1,4 +1,4 @@
-timport React from 'react';
+import React from 'react';
 import Styled from 'styled-components';
 
 import logo from './images/logo.svg';
