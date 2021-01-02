@@ -1,4 +1,4 @@
-import React from 'react';
+timport React from 'react';
 import Styled from 'styled-components';
 
 import logo from './images/logo.svg';
@@ -48,7 +48,6 @@ const HeroStyle = Styled.header`
             padding-top: 24px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
 
             img {
                 width: 180px;
