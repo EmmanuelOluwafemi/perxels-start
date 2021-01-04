@@ -11,7 +11,7 @@ const Hero = () => {
             <div className="overlay"></div>
             <div className="wrapper">
                 <nav>
-                    <img className="img-fluid" src={logo} alt="perxels logo"/>
+                    <a href="https://perxels.com/"><img className="img-fluid" src={logo} alt="perxels logo"/></a>
                     <p><a href="http://wa.link/fschxi">Get in contact</a> <span>if you have any questions</span></p>
                 </nav>
             </div>
