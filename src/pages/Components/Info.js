@@ -4,13 +4,16 @@ import Styled from 'styled-components';
 import image1 from './images/image1.jpg';
 import image2 from './images/image2.jpg';
 
+import beginer from './files/PERXELS_MASTERCLASS(BEGINNER).pdf';
+import intermediate from './files/PERXELS_MASTERCLASS.pdf';
+
 export const Info = () => {
 
     const [isModal, setIsModal] = useState(false);
 
-    const handleOnClick = () => {
-        setIsModal(true);
-    }
+    // const handleOnClick = () => {
+    //     setIsModal(true);
+    // }
 
     const closeModal = () => {
         setIsModal(false);
@@ -45,7 +48,7 @@ export const Info = () => {
 
                         </InfoList>
                         <button className="joinBtn"><a href="https://forms.gle/Sf41pk3gYVhKMa1d7">JOIN THE BEGINNERS CLASS</a></button>
-                        <button onClick={handleOnClick} className="downloadBtn">DOWNLOAD YOUR CLASS PROJECT</button>
+                        <button className="downloadBtn"><a href={beginer}>DOWNLOAD YOUR CLASS PROJECT</a></button>
                     </Content>
                     <ImageContainer className="col-md-6 mt-5 mt-md-0">
                         <div className="under"></div>
@@ -67,7 +70,7 @@ export const Info = () => {
 
                         </InfoList>
                         <button className="joinBtn"><a href="https://forms.gle/Sf41pk3gYVhKMa1d7">JOIN THE INTERMEDIATE CLASS</a></button>
-                        <button onClick={handleOnClick} className="downloadBtn">DOWNLOAD YOUR CLASS PROJECT</button>
+                        <button className="downloadBtn"><a href={intermediate}>DOWNLOAD YOUR CLASS PROJECT</a></button>
                     </Content>
                     
                 </div>
@@ -245,6 +248,11 @@ const Content = Styled.div`
 
         &:hover {
             background: #d0cdcd;
+        }
+
+        a {
+            color: #34296B;
+            text-decoration: none;
         }
     }
 `;
