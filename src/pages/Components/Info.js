@@ -11,9 +11,10 @@ export const Info = () => {
 
     const [isModal, setIsModal] = useState(false);
 
-    // const handleOnClick = () => {
-    //     setIsModal(true);
-    // }
+    const handleOnClick = (e) => {
+        e.preventDefault();
+        setIsModal(true);
+    }
 
     const closeModal = () => {
         setIsModal(false);
@@ -23,8 +24,8 @@ export const Info = () => {
         <>
         <Modal onClick={closeModal} className={isModal ? 'show' : ''}>
             <div className="modalContent">
-                Projects will be available when the class starts.
-                <button><a href="https://forms.gle/Sf41pk3gYVhKMa1d7">Join The Class</a></button>
+                The Registration Has been closed till February.
+                {/* <button disabled><a href="#">Join The Class</a></button> */}
             </div>
         </Modal>
         <InfoStyle id="info">
@@ -47,7 +48,7 @@ export const Info = () => {
                                 principles of design</span></li>
 
                         </InfoList>
-                        <button className="joinBtn"><a href="https://forms.gle/Sf41pk3gYVhKMa1d7">JOIN THE BEGINNERS CLASS</a></button>
+                        <button  onClick={handleOnClick} className="joinBtn">JOIN THE BEGINNERS CLASS</button>
                         <button className="downloadBtn"><a href={beginer}>DOWNLOAD YOUR CLASS PROJECT</a></button>
                     </Content>
                     <ImageContainer className="col-md-6 mt-5 mt-md-0">
@@ -67,9 +68,9 @@ export const Info = () => {
                             <li><div></div><span>You can make beautiful and clean designs to an extent</span></li>
                             <li><div></div><span>You don't understand how to use design<br/> thinking process to solve problem</span></li>
                             <li><div></div><span>When working on a project you get stuck often <br/>You have design block often</span></li>
-
                         </InfoList>
-                        <button className="joinBtn"><a href="https://forms.gle/Sf41pk3gYVhKMa1d7">JOIN THE INTERMEDIATE CLASS</a></button>
+                        {/* https://forms.gle/Sf41pk3gYVhKMa1d7 */}
+                        <button onClick={handleOnClick} className="joinBtn">JOIN THE INTERMEDIATE CLASS</button>
                         <button className="downloadBtn"><a href={intermediate}>DOWNLOAD YOUR CLASS PROJECT</a></button>
                     </Content>
                     
@@ -206,14 +207,18 @@ const Content = Styled.div`
     .joinBtn {
         width: 249px;
         height: 42px;
-        background: #edc602;
+        background: #C4C4C4;
+        color: #34296B;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: bold;
         border: none;
         outline: none;
         border-radius: 5px;
         display: block;
 
         &:hover {
-            background: #d0ad02;
+            background: #d0cdcd;
         }
 
         a {
@@ -231,7 +236,7 @@ const Content = Styled.div`
     .downloadBtn {
         width: 284px;
         height: 42px;
-        background: #C4C4C4;
+        background: #edc602;
         border: none;
         outline: none;
         border-radius: 5px;
@@ -247,7 +252,7 @@ const Content = Styled.div`
         }
 
         &:hover {
-            background: #d0cdcd;
+            background: #d0ad02;
         }
 
         a {
