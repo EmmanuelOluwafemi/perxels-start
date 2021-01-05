@@ -24,7 +24,7 @@ export const Info = () => {
         <>
         <Modal onClick={closeModal} className={isModal ? 'show' : ''}>
             <div className="modalContent">
-                The Registration Has been closed till February.
+                The Registration is closed till February.
                 {/* <button disabled><a href="#">Join The Class</a></button> */}
             </div>
         </Modal>
