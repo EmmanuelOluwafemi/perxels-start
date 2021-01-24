@@ -209,7 +209,7 @@ const Content = Styled.div`
     .joinBtn {
         width: 249px;
         height: 42px;
-        background: #C4C4C4;
+        background: #edc602;
         color: #34296B;
         font-family: 'Roboto', sans-serif;
         font-size: 14px;
@@ -240,7 +240,7 @@ const Content = Styled.div`
     .downloadBtn {
         width: 284px;
         height: 42px;
-        background: #edc602;
+        background: #C4C4C4;
         border: none;
         outline: none;
         border-radius: 5px;
