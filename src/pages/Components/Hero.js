@@ -4,6 +4,8 @@ import Styled from 'styled-components';
 import logo from './images/logo.svg';
 import heroImage from './images/hero_image.jpg';
 
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
 
     return (
@@ -17,7 +19,7 @@ const Hero = () => {
             </div>
             <div className="content">
                 <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" >Welcome To <span>PERXELS FREE</span> UIUX Design masterclass</h2>
-                <button><a href="#info">Join The Class</a></button>
+                <button><Link href="/login">Join The Class</Link></button>
             </div>
         </HeroStyle>
     )
