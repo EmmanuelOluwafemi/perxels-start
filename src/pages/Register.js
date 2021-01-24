@@ -128,6 +128,21 @@ const Register = () => {
                 </div>
 
                 <div className="inpuGroup">
+                    <label className="labels" style={{ marginBottom: '24px' }}>Are you from Kwarabuild Community? <span>*</span></label>
+
+                    <div className="radioBox">
+                        <input type="radio" id="Yes" value="Yes" ref={register({ required: true })} name="kswarabuild" />
+                        <label className="check" for="Yes"></label>
+                        <label for="Yes">Yes</label>
+                    </div>
+                    <div className="radioBox">
+                        <input type="radio" id="No" value="No" ref={register({ required: true })} name="kwarabuild" />
+                        <label className="check" for="No"></label>
+                        <label for="No">No</label>
+                    </div>
+                </div>
+
+                <div className="inpuGroup">
                     <label className="labels" htmlFor="Category" style={{ marginBottom: '24px' }}>Where did you hear about perxels? <span>*</span></label>
 
                     <div className="radioBox">
