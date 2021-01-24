@@ -19,7 +19,7 @@ const Hero = () => {
             </div>
             <div className="content">
                 <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" >Welcome To <span>PERXELS FREE</span> UIUX Design masterclass</h2>
-                <button><Link href="/register">Join The Class</Link></button>
+                <button><Link href="#info">Join The Class</Link></button>
             </div>
         </HeroStyle>
     )
