@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+import { Link } from 'react-router-dom';
+
 import Styled from 'styled-components';
 import image1 from './images/image1.jpg';
 import image2 from './images/image2.jpg';
@@ -11,10 +13,10 @@ export const Info = () => {
 
     const [isModal, setIsModal] = useState(false);
 
-    const handleOnClick = (e) => {
-        e.preventDefault();
-        setIsModal(true);
-    }
+    // const handleOnClick = (e) => {
+    //     e.preventDefault();
+    //     setIsModal(true);
+    // }
 
     const closeModal = () => {
         setIsModal(false);
@@ -48,7 +50,7 @@ export const Info = () => {
                                 principles of design</span></li>
 
                         </InfoList>
-                        <button  onClick={handleOnClick} className="joinBtn">JOIN THE BEGINNERS CLASS</button>
+                        <Link to="/register" className="joinBtn">JOIN THE BEGINNERS CLASS</Link>
                         <button className="downloadBtn"><a href={beginer}>DOWNLOAD YOUR CLASS PROJECT</a></button>
                     </Content>
                     <ImageContainer className="col-md-6 mt-5 mt-md-0">
@@ -70,7 +72,7 @@ export const Info = () => {
                             <li><div></div><span>When working on a project you get stuck often <br/>You have design block often</span></li>
                         </InfoList>
                         {/* https://forms.gle/Sf41pk3gYVhKMa1d7 */}
-                        <button onClick={handleOnClick} className="joinBtn">JOIN THE INTERMEDIATE CLASS</button>
+                        <Link to="/register" className="joinBtn">JOIN THE INTERMEDIATE CLASS</Link>
                         <button className="downloadBtn"><a href={intermediate}>DOWNLOAD YOUR CLASS PROJECT</a></button>
                     </Content>
                     
@@ -215,7 +217,9 @@ const Content = Styled.div`
         border: none;
         outline: none;
         border-radius: 5px;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &:hover {
             background: #d0cdcd;
@@ -240,7 +244,9 @@ const Content = Styled.div`
         border: none;
         outline: none;
         border-radius: 5px;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 24px;
         font-family: 'Roboto', sans-serif;
         font-size: 14px;
