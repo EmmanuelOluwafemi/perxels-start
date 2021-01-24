@@ -108,7 +108,7 @@ const Register = () => {
                 </div>
                 
                 <div className="inpuGroup">
-                    <label className="labels" htmlFor="Category" style={{ marginBottom: '24px' }}>Where did you hear about Perxels? <span>*</span></label>
+                    <label className="labels" htmlFor="Category" style={{ marginBottom: '24px' }}>Which of this class are you joining for the masterclass? <span>*</span></label>
 
                     <div className="checkbox">
                         <input type="checkbox" id="beginer" value="Beginner's Class" ref={register({ required: true })} name="class" />
@@ -128,7 +128,7 @@ const Register = () => {
                 </div>
 
                 <div className="inpuGroup">
-                    <label className="labels" htmlFor="Category" style={{ marginBottom: '24px' }}>Which of this class are you joining for the masterclass? <span>*</span></label>
+                    <label className="labels" htmlFor="Category" style={{ marginBottom: '24px' }}>Where did you hear about perxels? <span>*</span></label>
 
                     <div className="radioBox">
                         <input type="radio" id="instergram" value="instagram" ref={register({ required: true })} name="refer" />

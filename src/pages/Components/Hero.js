@@ -4,8 +4,6 @@ import Styled from 'styled-components';
 import logo from './images/logo.svg';
 import heroImage from './images/hero_image.jpg';
 
-import { Link } from 'react-router-dom';
-
 const Hero = () => {
 
     return (
@@ -14,12 +12,11 @@ const Hero = () => {
             <div className="wrapper">
                 <nav>
                     <a href="https://perxels.com/"><img className="img-fluid" src={logo} alt="perxels logo"/></a>
-                    <p><a href="http://wa.link/fschxi">Get in contact</a> <span>if you have any questions</span></p>
                 </nav>
             </div>
             <div className="content">
-                <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" >Welcome To <span>PERXELS FREE</span> UIUX Design masterclass</h2>
-                <button><Link to="/register">Join The Class</Link></button>
+                <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" >Welcome To <span>PERXELS FREE</span> UIUX Design Masterclass</h2>
+                <button><a href="#info">Join The Class</a></button>
             </div>
         </HeroStyle>
     )
