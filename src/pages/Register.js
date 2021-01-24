@@ -83,7 +83,7 @@ const Register = () => {
                 </div>
                 <div className="inpuGroup">
                     <label className="labels" htmlFor="number">Whatsapp Number <span>*</span></label>
-                    <input className={errors.number ? "inputs error" : "inputs"} id="number" name="text" ref={register({ required: true, minLength:5, maxLength: 12 })} type="text"/>
+                    <input className={errors.number ? "inputs error" : "inputs"} id="number" name="number" ref={register({ required: true, minLength:5, maxLength: 12 })} type="text"/>
                 </div>
 
                 <div className="inpuGroup">
