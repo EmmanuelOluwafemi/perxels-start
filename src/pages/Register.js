@@ -19,9 +19,10 @@ const Register = () => {
 
     const handleOnclick = () => { setModal(!showModal) }
 
-    const handleClass = () => { setImmediate(!isIntermediate) }
+    const handleClass = () => { setIntermediate(!isIntermediate) }
 
     const onSubmit = (data) => {
+        console.log('submitted')
         setLoading(true);
         fetch("https://api.apispreadsheets.com/data/7085/", {
             method: "POST",
@@ -30,10 +31,6 @@ const Register = () => {
             if (res.status === 201) {
                 // Success
                 console.log('sent');
-                if(isIntermediate) {
-                    setIntermediate(true);
-                }
-
                 setModal(!showModal);
                 setLoading(false);
             }
@@ -44,7 +41,6 @@ const Register = () => {
                 console.log(Error);
             }
         })
-
     };
 
     return (
@@ -77,49 +73,50 @@ const Register = () => {
                     <label className="labels" htmlFor="email">Email Address <span>*</span></label>
                     <input className={errors.email ? "inputs error" : "inputs"} id="email" name="email" ref={register({ required: true, minLength: 8 })} type="email"/>
                 </div>
+
                 <div className="inpuGroup">
                     <label className="labels" htmlFor="location">Location <span>*</span></label>
                     <input className={errors.location ? "inputs error" : "inputs"} id="location" name="location" ref={register({ required:true, minLength: 2 })} type="text"/>
                 </div>
                 <div className="inpuGroup">
                     <label className="labels" htmlFor="number">Whatsapp Number <span>*</span></label>
-                    <input className={errors.number ? "inputs error" : "inputs"} id="number" name="number" ref={register({ required: true, minLength:5, maxLength: 12 })} type="text"/>
+                    <input className={errors.number ? "inputs error" : "inputs"} id="number" name="number" ref={register({ required: true })} type="text"/>
                 </div>
 
                 <div className="inpuGroup">
                     <label className="labels" htmlFor="Category" style={{ marginBottom: '24px' }}>Category <span>*</span></label>
                     <div className="checkbox">
                         <input type="checkbox" value="Corper" id="corper" ref={register({ required: true })} name="category" />
-                        <label className="check" for="corper"></label>
-                        <label for="corper">Corper</label>
+                        <label className="check" htmlFor="corper"></label>
+                        <label htmlFor="corper">Corper</label>
                     </div>
 
                     <div className="checkbox">
                         <input type="checkbox" value="Undergraduate" id="undergraduate" ref={register({ required: true })} name="category" />
-                        <label className="check" for="undergraduate"></label>
-                        <label for="undergraduate">Undergraduate</label>
+                        <label className="check" htmlFor="undergraduate"></label>
+                        <label htmlFor="undergraduate">Undergraduate</label>
                     </div>
 
                     <div className="checkbox">
                         <input type="checkbox" value="Graduate" id="graduate" ref={register({ required: true })} name="category" />
-                        <label className="check" for="graduate"></label>
-                        <label for="graduate">Graduate</label>
+                        <label className="check" htmlFor="graduate"></label>
+                        <label htmlFor="graduate">Graduate</label>
                     </div>
                 </div>
-                
+
                 <div className="inpuGroup">
                     <label className="labels" htmlFor="Category" style={{ marginBottom: '24px' }}>Which of this class are you joining for the masterclass? <span>*</span></label>
 
                     <div className="checkbox">
                         <input type="checkbox" id="beginer" value="Beginner's Class" ref={register({ required: true })} name="class" />
-                        <label className="check" for="beginer"></label>
-                        <label for="beginer">Beginner’s class</label>
+                        <label className="check" htmlFor="beginer"></label>
+                        <label htmlFor="beginer">Beginner’s class</label>
                     </div>
 
                     <div className="checkbox">
                         <input onClick={handleClass} type="checkbox" value="Intermediate Class" id="intermediate" ref={register({ required: true })} name="class" />
-                        <label className="check" for="intermediate"></label>
-                        <label for="intermediate">Intermediate class</label>
+                        <label className="check" htmlFor="intermediate"></label>
+                        <label htmlFor="intermediate">Intermediate class</label>
                     </div>
                 </div>
                 <div className="inpuGroup">
@@ -128,17 +125,18 @@ const Register = () => {
                 </div>
 
                 <div className="inpuGroup">
-                    <label className="labels" style={{ marginBottom: '24px' }}>Are you from Kwarabuild Community? <span>*</span></label>
+                    <label className="labels" htmlFor="Category" style={{ marginBottom: '24px' }}>Where did you hear about perxels? <span>*</span></label>
 
                     <div className="radioBox">
-                        <input type="radio" id="Yes" value="Yes" ref={register({ required: true })} name="kswarabuild" />
-                        <label className="check" for="Yes"></label>
-                        <label for="Yes">Yes</label>
+                        <input type="radio" id="kwarabuildyes" value="Yes" ref={register({ required: true })} name="kwarabuild" />
+                        <label className="check" htmlFor="kwarabuildyes"></label>
+                        <label htmlFor="kwarabuildno">Yes</label>
                     </div>
+
                     <div className="radioBox">
-                        <input type="radio" id="No" value="No" ref={register({ required: true })} name="kwarabuild" />
-                        <label className="check" for="No"></label>
-                        <label for="No">No</label>
+                        <input type="radio" id="kwarabuildno" value="No" ref={register({ required: true })} name="kwarabuild" />
+                        <label className="check" htmlFor="kwarabuildno"></label>
+                        <label htmlFor="kwarabuildno">No</label>
                     </div>
                 </div>
 
@@ -147,38 +145,38 @@ const Register = () => {
 
                     <div className="radioBox">
                         <input type="radio" id="instergram" value="instagram" ref={register({ required: true })} name="refer" />
-                        <label className="check" for="instagram"></label>
-                        <label for="instergram">Instagram</label>
+                        <label className="check" htmlFor="instagram"></label>
+                        <label htmlFor="instergram">Instagram</label>
                     </div>
 
                     <div className="radioBox">
                         <input type="radio" id="facebook" value="facebook" ref={register({ required: true })} name="refer" />
-                        <label className="check" for="facebook"></label>
-                        <label for="facebook">Facebook</label>
+                        <label className="check" htmlFor="facebook"></label>
+                        <label htmlFor="facebook">Facebook</label>
                     </div>
 
                     <div className="radioBox">
                         <input type="radio" id="twitter" value="twitter" ref={register({ required: true })} name="refer" />
-                        <label className="check" for="twitter"></label>
-                        <label for="twitter">Twitter</label>
+                        <label className="check" htmlFor="twitter"></label>
+                        <label htmlFor="twitter">Twitter</label>
                     </div>
 
                     <div className="radioBox">
                         <input type="radio" id="friend" value="friend" ref={register({ required: true })} name="refer" />
-                        <label className="check" for="friend"></label>
-                        <label for="friend">Friend</label>
+                        <label className="check" htmlFor="friend"></label>
+                        <label htmlFor="friend">Friend</label>
                     </div>
 
                     <div className="radioBox">
                         <input type="radio" id="whatsapp" value="whatsapp status" ref={register({ required: true })} name="refer" />
-                        <label className="check" for="whatsapp"></label>
-                        <label for="whatsapp">Whatsapp Status</label>
+                        <label className="check" htmlFor="whatsapp"></label>
+                        <label htmlFor="whatsapp">Whatsapp Status</label>
                     </div>
 
                     <div className="radioBox">
                         <input type="radio" id="other" value="other" ref={register({ required: true })} name="refer" />
-                        <label className="check" for="other"></label>
-                        <label for="other">Other</label>
+                        <label className="check" htmlFor="other"></label>
+                        <label htmlFor="other">Other</label>
                     </div>
                 </div>
 
