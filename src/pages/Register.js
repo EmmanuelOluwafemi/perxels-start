@@ -48,8 +48,8 @@ const Register = () => {
             <Modal className={showModal ? 'show' : ''}>
                 <div className="modalContainer">
                     <IoCloseSharp className="close" onClick={handleOnclick} />
-                    <p>Thank You for registering (Check perxels design school, Click 
-                        on enroll to see the inspiration), Join your class with the link below</p>
+                    <p>Thank you for registering for the Masterclass. 
+                        Join your class by clicking on the button</p>
                     
                     {isIntermediate ? 
                         <a href="https://chat.whatsapp.com/C1va8npW7LO294COEVcOZE">Join Class</a> :
