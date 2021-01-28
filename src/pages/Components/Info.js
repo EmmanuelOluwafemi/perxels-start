@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 
-import { Link } from 'react-router-dom';
-
 import Styled from 'styled-components';
 import image1 from './images/image1.jpg';
 import image2 from './images/image2.jpg';
@@ -12,6 +10,7 @@ import image2 from './images/image2.jpg';
 export const Info = () => {
 
     const [isModal, setIsModal] = useState(false);
+    const [isModal2, setIsModal2] = useState(false);
 
     const handleOnClick = (e) => {
         e.preventDefault();
@@ -22,11 +21,26 @@ export const Info = () => {
         setIsModal(false);
     }
 
+    const handleOnClick2 = (e) => {
+        e.preventDefault();
+        setIsModal2(true);
+    }
+
+    const closeModal2 = () => {
+        setIsModal2(false);
+    }
+
     return (
         <>
         <Modal onClick={closeModal} className={isModal ? 'show' : ''}>
             <div className="modalContent">
                 The assignment will be available when the class Starts
+                {/* <button disabled><a href="#">Join The Class</a></button> */}
+            </div>
+        </Modal>
+        <Modal onClick={closeModal2} className={isModal2 ? 'show' : ''}>
+            <div className="modalContent">
+                Registration has closed until febuary
                 {/* <button disabled><a href="#">Join The Class</a></button> */}
             </div>
         </Modal>
@@ -50,7 +64,7 @@ export const Info = () => {
                                 principles of design</span></li>
 
                         </InfoList>
-                        <Link to="/register" className="joinBtn">JOIN THE BEGINNERS CLASS</Link>
+                        <button onClick={handleOnClick2} className="joinBtn">JOIN THE BEGINNERS CLASS</button>
                         <button onClick={handleOnClick} className="downloadBtn">DOWNLOAD YOUR CLASS PROJECT</button>
                     </Content>
                     <ImageContainer className="col-md-6 mt-5 mt-md-0">
@@ -72,7 +86,7 @@ export const Info = () => {
                             <li><div></div><span>When working on a project you get stuck often <br/>You have design block often</span></li>
                         </InfoList>
                         {/* https://forms.gle/Sf41pk3gYVhKMa1d7 */}
-                        <Link to="/register" className="joinBtn">JOIN THE INTERMEDIATE CLASS</Link>
+                        <button onClick={handleOnClick2} className="joinBtn">JOIN THE INTERMEDIATE CLASS</button>
                         <button onClick={handleOnClick} className="downloadBtn">DOWNLOAD YOUR CLASS PROJECT</button>
                     </Content>
                     
