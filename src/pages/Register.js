@@ -52,8 +52,8 @@ const Register = () => {
                         Join your class by clicking on the button</p>
                     
                     {isIntermediate ? 
-                        <a href="https://chat.whatsapp.com/C1va8npW7LO294COEVcOZE">Join Class</a> :
-                        <a href="https://chat.whatsapp.com/KPq3nABurxHBz1abK1GRsh">Join Class</a>
+                        <a href="https://chat.whatsapp.com/J1teWLUEUbt2tcEU25kkQt">Join Class</a> :
+                        <a href="https://chat.whatsapp.com/HBY0Ym119JQDN8OhxjOWvZ">Join Class</a>
                     }
                 </div>
             </Modal>
