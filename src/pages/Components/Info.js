@@ -1,49 +1,50 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 
 import Styled from 'styled-components';
 import image1 from './images/image1.jpg';
 import image2 from './images/image2.jpg';
 
-import beginer from './files/PERXELS_MASTERCLASS(BEGINNER).pdf';
-import intermediate from './files/PERXELS_MASTERCLASS.pdf';
+// import beginer from './files/PERXELS_MASTERCLASS(BEGINNER).pdf';
+// import intermediate from './files/PERXELS_MASTERCLASS.pdf';
 
 export const Info = () => {
 
-    // const [isModal, setIsModal] = useState(false);
-    const [isModal2, setIsModal2] = useState(false);
+    const [isModal, setIsModal] = useState(false);
+    // const [isModal2, setIsModal2] = useState(false);
 
-    // const handleOnClick = (e) => {
-    //     e.preventDefault();
-    //     setIsModal(true);
-    // }
-
-    // const closeModal = () => {
-    //     setIsModal(false);
-    // }
-
-    const handleOnClick2 = (e) => {
+    const handleOnClick = (e) => {
         e.preventDefault();
-        setIsModal2(true);
+        setIsModal(true);
     }
 
-    const closeModal2 = () => {
-        setIsModal2(false);
+    const closeModal = () => {
+        setIsModal(false);
     }
+
+    // const handleOnClick2 = (e) => {
+    //     e.preventDefault();
+    //     setIsModal2(true);
+    // }
+
+    // const closeModal2 = () => {
+    //     setIsModal2(false);
+    // }
 
     return (
         <>
-        {/* <Modal onClick={closeModal} className={isModal ? 'show' : ''}>
+        <Modal onClick={closeModal} className={isModal ? 'show' : ''}>
             <div className="modalContent">
                 The assignment will be available when the class Starts
-                <button disabled><a href="#">Join The Class</a></button>
-            </div>
-        </Modal> */}
-        <Modal onClick={closeModal2} className={isModal2 ? 'show' : ''}>
-            <div className="modalContent">
-                Registration has closed until march
                 {/* <button disabled><a href="#">Join The Class</a></button> */}
             </div>
         </Modal>
+        {/* <Modal onClick={closeModal2} className={isModal2 ? 'show' : ''}>
+            <div className="modalContent">
+                Registration has closed until march
+                <button disabled><a href="#">Join The Class</a></button>
+            </div>
+        </Modal> */}
         <InfoStyle id="info">
             <div className="wrapper">
                 <InfoHeadeingStyle>
@@ -64,8 +65,8 @@ export const Info = () => {
                                 principles of design</span></li>
 
                         </InfoList>
-                        <button onClick={handleOnClick2} className="joinBtn">JOIN THE BEGINNERS CLASS</button>
-                        <a href={beginer} className="downloadBtn">DOWNLOAD YOUR CLASS PROJECT</a>
+                        <Link to="/register" className="joinBtn">JOIN THE BEGINNERS CLASS</Link>
+                        <button onClick={handleOnClick} className="downloadBtn">DOWNLOAD YOUR CLASS PROJECT</button>
                     </Content>
                     <ImageContainer className="col-md-6 mt-5 mt-md-0">
                         <div className="under"></div>
@@ -86,8 +87,8 @@ export const Info = () => {
                             <li><div></div><span>When working on a project you get stuck often <br/>You have design block often</span></li>
                         </InfoList>
                         {/* https://forms.gle/Sf41pk3gYVhKMa1d7 */}
-                        <button onClick={handleOnClick2} className="joinBtn">JOIN THE INTERMEDIATE CLASS</button>
-                        <a href={intermediate} className="downloadBtn">DOWNLOAD YOUR CLASS PROJECT</a>
+                        <Link to="/register" className="joinBtn">JOIN THE INTERMEDIATE CLASS</Link>
+                        <button onClick={handleOnClick} className="downloadBtn">DOWNLOAD YOUR CLASS PROJECT</button>
                     </Content>
                     
                 </div>
@@ -223,7 +224,7 @@ const Content = Styled.div`
     .joinBtn {
         width: 249px;
         height: 42px;
-        background: #c4c4c4;
+        background: #edc602;
         color: #34296B;
         font-family: 'Roboto', sans-serif;
         font-size: 14px;
@@ -254,7 +255,7 @@ const Content = Styled.div`
     .downloadBtn {
         width: 284px;
         height: 42px;
-        background: #edc602;
+        background: #c4c4c4;
         border: none;
         outline: none;
         border-radius: 5px;
