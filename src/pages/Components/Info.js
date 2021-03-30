@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Styled from 'styled-components';
@@ -10,7 +10,7 @@ import intermediate from './files/PERXELS_MASTERCLASS.pdf';
 
 export const Info = () => {
 
-    const [isModal, setIsModal] = useState(false);
+    // const [isModal, setIsModal] = useState(false);
     // const [isModal2, setIsModal2] = useState(false);
 
     // const handleOnClick = (e) => {
@@ -98,70 +98,70 @@ export const Info = () => {
     )
 }
 
-const Modal = Styled.div`
-    position: fixed;
-    z-index: 50;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, .6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transform: scaleX(0);
-    transition: all ease-in .3s;
-    transform-origin: left;
-    cursor: pointer;
+// const Modal = Styled.div`
+//     position: fixed;
+//     z-index: 50;
+//     top: 0;
+//     width: 100vw;
+//     height: 100vh;
+//     background: rgba(0, 0, 0, .6);
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     opacity: 0;
+//     transform: scaleX(0);
+//     transition: all ease-in .3s;
+//     transform-origin: left;
+//     cursor: pointer;
 
-    &.show {
-        opacity: 1;
-        transform: scaleX(1);
-    }
+//     &.show {
+//         opacity: 1;
+//         transform: scaleX(1);
+//     }
 
-    .modalContent {
-        width: 100%;
-        max-width: 500px;
-        height: 300px;
-        padding: 2rem;
-        background: #34296B;
-        border-top: 10px solid #FFD300;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold;
-        font-size: 1.4rem;
-        color: #FFF;
-        text-align: center;
+//     .modalContent {
+//         width: 100%;
+//         max-width: 500px;
+//         height: 300px;
+//         padding: 2rem;
+//         background: #34296B;
+//         border-top: 10px solid #FFD300;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         font-family: 'Roboto', sans-serif;
+//         font-weight: bold;
+//         font-size: 1.4rem;
+//         color: #FFF;
+//         text-align: center;
 
-        button {
-            width: 200px;
-            height: 48px;
-            border-radius: 50px;
-            border: none;
-            outline: none;
-            background: #FFD300;
-            margin-top: 24px;
+//         button {
+//             width: 200px;
+//             height: 48px;
+//             border-radius: 50px;
+//             border: none;
+//             outline: none;
+//             background: #FFD300;
+//             margin-top: 24px;
 
-            &:hover {
-                background: #edc602;
-            }
+//             &:hover {
+//                 background: #edc602;
+//             }
 
-            a {
-                color: #34296B;
-                font-family: "Roboto", sans-serif;
-                font-weight: bold;
-                font-size: 1.3rem;
+//             a {
+//                 color: #34296B;
+//                 font-family: "Roboto", sans-serif;
+//                 font-weight: bold;
+//                 font-size: 1.3rem;
 
-                &:hover {
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-`;
+//                 &:hover {
+//                     text-decoration: none;
+//                 }
+//             }
+//         }
+//     }
+// `;
 
 const InfoStyle = Styled.div`
     background: #34296B;
