@@ -5,22 +5,22 @@ import Styled from 'styled-components';
 import image1 from './images/image1.jpg';
 import image2 from './images/image2.jpg';
 
-// import beginer from './files/PERXELS_MASTERCLASS(BEGINNER).pdf';
-// import intermediate from './files/PERXELS_MASTERCLASS.pdf';
+import beginer from './files/PERXELS_MASTERCLASS(BEGINNER).pdf';
+import intermediate from './files/PERXELS_MASTERCLASS.pdf';
 
 export const Info = () => {
 
     const [isModal, setIsModal] = useState(false);
     // const [isModal2, setIsModal2] = useState(false);
 
-    const handleOnClick = (e) => {
-        e.preventDefault();
-        setIsModal(true);
-    }
+    // const handleOnClick = (e) => {
+    //     e.preventDefault();
+    //     setIsModal(true);
+    // }
 
-    const closeModal = () => {
-        setIsModal(false);
-    }
+    // const closeModal = () => {
+    //     setIsModal(false);
+    // }
 
     // const handleOnClick2 = (e) => {
     //     e.preventDefault();
@@ -33,12 +33,12 @@ export const Info = () => {
 
     return (
         <>
-        <Modal onClick={closeModal} className={isModal ? 'show' : ''}>
+        {/* <Modal onClick={closeModal} className={isModal ? 'show' : ''}>
             <div className="modalContent">
                 The assignment will be available when the class Starts
-                {/* <button disabled><a href="#">Join The Class</a></button> */}
+                <button disabled><a href="#">Join The Class</a></button>
             </div>
-        </Modal>
+        </Modal> */}
         {/* <Modal onClick={closeModal2} className={isModal2 ? 'show' : ''}>
             <div className="modalContent">
                 Registration has closed until march
@@ -66,7 +66,7 @@ export const Info = () => {
 
                         </InfoList>
                         <Link to="/register" className="joinBtn">JOIN THE BEGINNERS CLASS</Link>
-                        <button onClick={handleOnClick} className="downloadBtn">DOWNLOAD YOUR CLASS PROJECT</button>
+                        <a href={beginer} className="downloadBtn">DOWNLOAD YOUR CLASS PROJECT</a>
                     </Content>
                     <ImageContainer className="col-md-6 mt-5 mt-md-0">
                         <div className="under"></div>
@@ -88,7 +88,7 @@ export const Info = () => {
                         </InfoList>
                         {/* https://forms.gle/Sf41pk3gYVhKMa1d7 */}
                         <Link to="/register" className="joinBtn">JOIN THE INTERMEDIATE CLASS</Link>
-                        <button onClick={handleOnClick} className="downloadBtn">DOWNLOAD YOUR CLASS PROJECT</button>
+                        <a href={intermediate} className="downloadBtn">DOWNLOAD YOUR CLASS PROJECT</a>
                     </Content>
                     
                 </div>
